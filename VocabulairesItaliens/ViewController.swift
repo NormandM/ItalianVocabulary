@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         chooseQuestion()
         hint.text = ""
+        goodAnswer.text = ""
 
     }
     func chooseQuestion() {
@@ -108,6 +109,7 @@ class ViewController: UIViewController {
             let goodScoreString = String.init(goodScore)
             selectedItem[2] = goodScoreString
             selectedItem[4] = String.init(NSDate())
+            goodAnswer.text = "Buona Risposta!"
             if indexFirstBad == 1 {
                 arr[indexAppend] = selectedItem
             }else{
