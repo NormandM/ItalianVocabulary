@@ -10,6 +10,7 @@
 		8E0A08871C9EF3F80052886B /* dataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A08861C9EF3F80052886B /* dataStructure.swift */; };
 		8E2E705C1C9B0AE500F67583 /* Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E705B1C9B0AE400F67583 /* Plist.swift */; };
 		8E8B03371CB1A84700DCAAF3 /* VocabulaireItalien.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E8B03361CB1A84700DCAAF3 /* VocabulaireItalien.plist */; };
+		8EB2A01F1CC69F0D00BAD7C4 /* ListeResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB2A01E1CC69F0D00BAD7C4 /* ListeResultsTableViewController.swift */; };
 		8EC21ADF1C99F76E00530259 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC21ADE1C99F76E00530259 /* AppDelegate.swift */; };
 		8EC21AE11C99F76E00530259 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC21AE01C99F76E00530259 /* ViewController.swift */; };
 		8EC21AE41C99F76E00530259 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EC21AE21C99F76E00530259 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		8E0A08861C9EF3F80052886B /* dataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataStructure.swift; sourceTree = "<group>"; };
 		8E2E705B1C9B0AE400F67583 /* Plist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
 		8E8B03361CB1A84700DCAAF3 /* VocabulaireItalien.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = VocabulaireItalien.plist; path = "../../../../Desktop/VerbeItalien folder/PlistFiles/VocabulaireItalien.plist"; sourceTree = "<group>"; };
+		8EB2A01E1CC69F0D00BAD7C4 /* ListeResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListeResultsTableViewController.swift; sourceTree = "<group>"; };
 		8EC21ADB1C99F76E00530259 /* VocabulairesItaliens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocabulairesItaliens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC21ADE1C99F76E00530259 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EC21AE01C99F76E00530259 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			children = (
 				8EC21ADE1C99F76E00530259 /* AppDelegate.swift */,
 				8EC21AE01C99F76E00530259 /* ViewController.swift */,
+				8EB2A01E1CC69F0D00BAD7C4 /* ListeResultsTableViewController.swift */,
 				8E8B03361CB1A84700DCAAF3 /* VocabulaireItalien.plist */,
 				8EC21AE21C99F76E00530259 /* Main.storyboard */,
 				8EC21AE51C99F76E00530259 /* Assets.xcassets */,
@@ -270,6 +273,7 @@
 				8E0A08871C9EF3F80052886B /* dataStructure.swift in Sources */,
 				8EC21AE11C99F76E00530259 /* ViewController.swift in Sources */,
 				8EC21ADF1C99F76E00530259 /* AppDelegate.swift in Sources */,
+				8EB2A01F1CC69F0D00BAD7C4 /* ListeResultsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

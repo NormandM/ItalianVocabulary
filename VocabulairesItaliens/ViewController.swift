@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     var frenchRandomItem: Int = 0
     var italianItem: String = ""
     var arr: NSMutableArray = []
+    var newArr: NSArray = []
     var hintWords: [String] = []
     var n: Int = 0
     var diffGoodBad: Int = 0
@@ -50,17 +51,16 @@ class ViewController: UIViewController {
                 let dateFormatter = NSDateFormatter()
                 dateFormatter.timeZone = NSTimeZone(forSecondsFromGMT: 0)
                 dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss +SSSS"
-                
+                successIndex.text = String(diffGoodBad)
                 if let lastDate = dateFormatter.dateFromString(itemDetail[4]){
                     let timeLaps: Double = NSDate().timeIntervalSinceDate(lastDate)
                     if diffGoodBad < 0 && timeLaps > 10800.00 && indexFirstBad == 0 {
-                    successIndex.text = String(diffGoodBad)
+                    
                     indexFirstBad = indexFirstBad + 1
                     indexAppend = indexArr
                     }
                 }
                 indexArr = indexArr + 1
-                //print(indexAppend)
             }
             if indexFirstBad == 1 {
                 let itemFrench = arr[indexAppend] as! [String]
@@ -75,7 +75,6 @@ class ViewController: UIViewController {
 
             }else{
             let nbItem = arr.count
-            //print(nbItem)
             frenchRandomItem = Int(arc4random_uniform(UInt32(nbItem)))
             let itemFrench = arr[frenchRandomItem] as! [String]
             frenchVocabulary.text = itemFrench[0]
@@ -139,12 +138,11 @@ class ViewController: UIViewController {
             } catch {
                 print(error)
             }
-           let newArr = plist.getValuesInPlistFile()
-           //print(newArr![frenchRandomItem])
-           // print(newArr![indexAppend])
-        
+           newArr = plist.getValuesInPlistFile()!
+        }else{
+            print("unable to get plist")
         }
-    truncItalianItem2 = ""
+
     return true
     }
     override func didReceiveMemoryWarning() {
@@ -163,6 +161,7 @@ class ViewController: UIViewController {
         chooseQuestion()
         n = 0
         hint.text = ""
+        goodAnswer.text = ""
 
     }
     
@@ -172,11 +171,20 @@ class ViewController: UIViewController {
             let indexWord = Int(arc4random_uniform(UInt32(numberWords)))
             hint.text = hint.text! + " " + hintWords[indexWord]
             n += 1
-
-    }
-    
-    
+        }
     }
 
+    @IBAction func showResultsButton(sender: UIButton) {
+        
+        
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showResultSegue" {
+            let controller = segue.destinationViewController as! ListeResultsTableViewController
+            controller.newArr = newArr
+            
+        }
+    }
 }
+
 
