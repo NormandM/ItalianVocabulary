@@ -10,11 +10,15 @@ import UIKit
 
 class ListeResultsTableViewController: UITableViewController {
     var newArr: NSArray = []
+    var triArr: [[String]] = [[""]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        let regArr = newArr as! [[String]]
+        func alpha (s1: [String], s2: [String]) -> Bool {
+            return s1[3] > s2[3]
+        }
+        triArr = regArr.sort(alpha)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -41,8 +45,8 @@ class ListeResultsTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("elementItalian", forIndexPath: indexPath)
-        let elementOne = newArr
-        let motPhrase = elementOne[indexPath.row]
+        let triArrNS = triArr as NSArray
+        let motPhrase = triArrNS[indexPath.row]
         let motJoint = motPhrase.componentsJoinedByString(" ")
         cell.textLabel!.text = motJoint
         return cell

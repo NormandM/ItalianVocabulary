@@ -51,11 +51,10 @@ class ViewController: UIViewController {
                 let dateFormatter = NSDateFormatter()
                 dateFormatter.timeZone = NSTimeZone(forSecondsFromGMT: 0)
                 dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss +SSSS"
-                successIndex.text = String(diffGoodBad)
                 if let lastDate = dateFormatter.dateFromString(itemDetail[4]){
                     let timeLaps: Double = NSDate().timeIntervalSinceDate(lastDate)
                     if diffGoodBad < 0 && timeLaps > 10800.00 && indexFirstBad == 0 {
-                    
+                        successIndex.text = String(diffGoodBad)
                     indexFirstBad = indexFirstBad + 1
                     indexAppend = indexArr
                     }
