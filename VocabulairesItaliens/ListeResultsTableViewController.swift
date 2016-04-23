@@ -19,6 +19,9 @@ class ListeResultsTableViewController: UITableViewController {
             return s1[3] > s2[3]
         }
         triArr = regArr.sort(alpha)
+        
+        tableView.estimatedRowHeight = 68.0
+        tableView.rowHeight = UITableViewAutomaticDimension
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
